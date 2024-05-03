@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-//import { getApiUrl } from "../../../utils/url";
+import { getApiUrl } from "../../../utils/url";
+//import { Alert } from "bootstrap";
 
 function SignupModal() {
   const [fName, setFName] = useState();
@@ -12,7 +13,7 @@ function SignupModal() {
 
   const handleSubmit = () => {
     axios
-      .post(`https://localhost:5000/api/auth/create-account`, {
+      .post(`${getApiUrl()}/api/auth/create-account`, {
         FirstName: fName,
         LastName: lName,
         PrimaryPhone: phone,

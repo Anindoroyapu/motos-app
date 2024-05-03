@@ -9,7 +9,8 @@ import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import "./Login/loginModal";
 import axios from "axios";
-//import { getApiUrl } from "../../utils/url";
+import { getApiUrl } from "../../utils/url";
+import { Alert } from "bootstrap";
 
 function Navbar() {
   const [show, setShow] = useState(false);
@@ -25,10 +26,9 @@ function Navbar() {
   const [password, setPassword] = useState();
 
   const handleSubmit = (ev) => {
-    ev.preventDefault();
     axios
-      .post(`https://localhost:5000/api/auth/login`, {
-        email: email,
+      .post(`${getApiUrl()}/api/auth/login`, {
+        PrimaryEmail: email,
         password: password,
       })
       .then((res) => {
@@ -37,6 +37,7 @@ function Navbar() {
       .catch((error) => {
         console.log(error);
       });
+    ev.preventDefault();
   };
   return (
     <nav className="header">
@@ -104,7 +105,11 @@ function Navbar() {
                       <Button variant="secondary" onClick={handleLoginClose}>
                         Close
                       </Button>
-                      <Button variant="primary" type="submit">
+                      <Button
+                        variant="primary"
+                        type="submit"
+                        onClick={handleSubmit}
+                      >
                         Login
                       </Button>
                     </Modal.Footer>
