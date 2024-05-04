@@ -9,6 +9,7 @@ import logo5 from "../../../assets/Brand/yamaha.png";
 import logo6 from "../../../assets/Brand/speeder.png";
 import { Link } from "react-router-dom";
 import mlinks from "../../../data/budgetGroup";
+import yamahaBikeList from "../../../data/BikeList/Yamaha/yamahaBikeList";
 
 function Home() {
   const CTYPES = {
@@ -16,6 +17,14 @@ function Home() {
     BUDGET: "budget",
     DISPLACEMENT: "displacement",
     BODYSTYLE: "bodyStyle",
+  };
+  const PRICELIST = {
+    YAMAHA: "yamaha",
+    SUZUKI: "suzuki",
+    HERO: "hero",
+    TVS: "tvs",
+    SPEEDER: "speeder",
+    HONDA: "honda",
   };
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -80,13 +89,13 @@ function Home() {
                 <div className="container ">
                   <div className="row d-inline-flex gap-5 me-2 p-4 border-bottom">
                     <div className="col ">
-                      <a href="# ">
+                      <Link>
                         <img
                           src={logo1}
                           alt=""
                           style={{ width: "100px", height: "100px" }}
                         />
-                      </a>
+                      </Link>
                     </div>
                     <div className="col">
                       <a href="# ">
@@ -116,13 +125,13 @@ function Home() {
                       </a>
                     </div>
                     <div className="col">
-                      <a href="# ">
+                      <Link onClick={() => toggleCollapse(PRICELIST.YAMAHA)}>
                         <img
                           src={logo5}
                           alt=""
                           style={{ width: "100px", height: "100px" }}
                         />
-                      </a>
+                      </Link>
                     </div>
                     <div className="col">
                       <a href="# ">
@@ -137,6 +146,38 @@ function Home() {
                 </div>
               </div>
             )}
+            <div className="container">
+              {categoryName === PRICELIST.YAMAHA && (
+                <div className="row align-items-start border border-secondary-subtle">
+                  {yamahaBikeList.map((item) => (
+                    <div>
+                      <div className="col border" key={item.id}>
+                        <div>
+                          <Link>
+                            <img
+                              src={item.img_url}
+                              alt={item.title}
+                              className=""
+                            />
+                          </Link>
+                        </div>
+                      </div>
+                      <div className="col border">
+                        <Link className="text-decoration-none">
+                          {item?.title}
+                        </Link>
+                        <div>{item?.price}</div>
+                        <div>{item?.CC}</div>
+                        <div>{item?.bikedetails}</div>
+                        <Link className=" fs-5 btn btn-primary text-decoration-none">
+                          Buy Now
+                        </Link>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
 
             {categoryName === CTYPES.BUDGET && (
               <div>

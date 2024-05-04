@@ -10,7 +10,7 @@ import Modal from "react-bootstrap/Modal";
 import "./Login/loginModal";
 import axios from "axios";
 import { getApiUrl } from "../../utils/url";
-import { Alert } from "bootstrap";
+//import { Alert } from "bootstrap";
 
 function Navbar() {
   const [show, setShow] = useState(false);
