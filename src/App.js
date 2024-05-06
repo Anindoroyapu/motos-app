@@ -14,6 +14,7 @@ import Upcomming from "./app/Pages/upcomming";
 //import LoginModalPage from "./app/Navbar/Login/loginModal";
 import SignupModal from "./app/Navbar/SignUp/signupModal";
 import YamahaBikeList from "./data/BikeList/Yamaha/yamahaBikeList";
+import PaymentForm from "../src/app/Pages/Payment/paymentForm.jsx";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/upcomming" element={<Upcomming />} />
         <Route path="/signupModal" element={<SignupModal />} />
         <Route path="/yamahaBikeList" element={<YamahaBikeList />} />
+        <Route path="/paymentForm" element={<PaymentForm />} />
       </Routes>
     </BrowserRouter>
   );

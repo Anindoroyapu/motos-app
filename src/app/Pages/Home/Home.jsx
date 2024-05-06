@@ -178,7 +178,10 @@ function Home() {
                         <div>{item?.price}</div>
                         <div>{item?.CC}</div>
                         <div>{item?.bikedetails}</div>
-                        <Link className=" fs-7 btn btn-primary text-decoration-none">
+                        <Link
+                          className=" fs-7 btn btn-primary text-decoration-none"
+                          to={"/paymentForm"}
+                        >
                           Buy Now
                         </Link>
                       </div>

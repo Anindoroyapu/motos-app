@@ -11,9 +11,7 @@
   justify-content: center;
   align-items: center;
 }
-.navbar-photo {
-  position: fixed;
-}
+
 .list-group-item:hover {
   font-weight: 700;
 }
