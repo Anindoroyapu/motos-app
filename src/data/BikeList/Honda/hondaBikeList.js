@@ -13,6 +13,7 @@ const hondaBikeList = [
     price: "Price: Upcoming..",
     bikedetails: " ",
     CC: "CC:  ",
+    path: "/paymentForm",
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ const hondaBikeList = [
     price: "Price: Upcoming..",
     bikedetails: " ",
     CC: "CC:... ",
+    path: "/paymentForm",
   },
   {
     id: 3,
@@ -29,6 +31,7 @@ const hondaBikeList = [
     price: "Price: Upcoming..",
     bikedetails: " ",
     CC: "CC:... ",
+    path: "/paymentForm",
   },
   {
     id: 4,

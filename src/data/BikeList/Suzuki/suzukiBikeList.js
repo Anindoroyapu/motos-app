@@ -13,6 +13,7 @@ const suzukiBikeList = [
     price: "Price: Upcoming..",
     bikedetails: " ",
     CC: "CC:  ",
+    path: "/paymentForm",
   },
   {
     id: 2,
@@ -29,6 +30,7 @@ const suzukiBikeList = [
     price: "Price: Upcoming..",
     bikedetails: " ",
     CC: "CC:... ",
+    path: "/paymentForm",
   },
   {
     id: 4,
@@ -37,6 +39,7 @@ const suzukiBikeList = [
     price: "Price: 675,000 BDT",
     bikedetails: " ",
     CC: "CC: 150cc ",
+    path: "/paymentForm",
   },
   {
     id: 5,

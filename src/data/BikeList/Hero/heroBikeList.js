@@ -53,6 +53,7 @@ const heroBikeList = [
     price: "Price: Upcoming..",
     bikedetails: " ",
     CC: "CC:... ",
+    path: "/paymentForm",
   },
 ];
 export default heroBikeList;

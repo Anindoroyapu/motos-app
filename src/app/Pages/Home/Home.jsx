@@ -193,7 +193,7 @@ function Home() {
                 <div className="row align-items-start border border-secondary-subtle">
                   {suzukiBikeList.map((item) => (
                     <div className="border m-2">
-                      <div className="col " key={item.id}>
+                      <div className="col " key={item.id} to={item.path}>
                         <div>
                           <Link>
                             <img
@@ -216,7 +216,10 @@ function Home() {
                         <div>{item?.price}</div>
                         <div>{item?.CC}</div>
                         <div>{item?.bikedetails}</div>
-                        <Link className=" fs-7 btn btn-primary text-decoration-none">
+                        <Link
+                          className=" fs-7 btn btn-primary text-decoration-none"
+                          to={"/paymentForm"}
+                        >
                           Buy Now
                         </Link>
                       </div>
@@ -228,7 +231,7 @@ function Home() {
                 <div className="row align-items-start border border-secondary-subtle">
                   {tvsBikeList.map((item) => (
                     <div className="border m-2">
-                      <div className="col " key={item.id}>
+                      <div className="col " key={item.id} to={item.path}>
                         <div>
                           <Link>
                             <img
@@ -251,7 +254,10 @@ function Home() {
                         <div>{item?.price}</div>
                         <div>{item?.CC}</div>
                         <div>{item?.bikedetails}</div>
-                        <Link className=" fs-7 btn btn-primary text-decoration-none">
+                        <Link
+                          className=" fs-7 btn btn-primary text-decoration-none"
+                          to={"/paymentForm"}
+                        >
                           Buy Now
                         </Link>
                       </div>
@@ -263,7 +269,7 @@ function Home() {
                 <div className="row align-items-start border border-secondary-subtle">
                   {heroBikeList.map((item) => (
                     <div className="border m-2">
-                      <div className="col " key={item.id}>
+                      <div className="col " key={item.id} to={item.path}>
                         <div>
                           <Link>
                             <img
@@ -286,7 +292,10 @@ function Home() {
                         <div>{item?.price}</div>
                         <div>{item?.CC}</div>
                         <div>{item?.bikedetails}</div>
-                        <Link className=" fs-7 btn btn-primary text-decoration-none">
+                        <Link
+                          className=" fs-7 btn btn-primary text-decoration-none"
+                          to={"/paymentForm"}
+                        >
                           Buy Now
                         </Link>
                       </div>
@@ -298,7 +307,7 @@ function Home() {
                 <div className="row align-items-start border border-secondary-subtle">
                   {hondaBikeList.map((item) => (
                     <div className="border m-2">
-                      <div className="col " key={item.id}>
+                      <div className="col " key={item.id} to={item.path}>
                         <div>
                           <Link>
                             <img
@@ -321,7 +330,10 @@ function Home() {
                         <div>{item?.price}</div>
                         <div>{item?.CC}</div>
                         <div>{item?.bikedetails}</div>
-                        <Link className=" fs-7 btn btn-primary text-decoration-none">
+                        <Link
+                          className=" fs-7 btn btn-primary text-decoration-none"
+                          to={"/paymentForm"}
+                        >
                           Buy Now
                         </Link>
                       </div>

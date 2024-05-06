@@ -13,6 +13,7 @@ const tvsBikeList = [
     price: "Price: Upcoming..",
     bikedetails: " ",
     CC: "CC:  ",
+    path: "/paymentForm",
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ const tvsBikeList = [
     price: "Price: Upcoming..",
     bikedetails: " ",
     CC: "CC:... ",
+    path: "/paymentForm",
   },
   {
     id: 3,

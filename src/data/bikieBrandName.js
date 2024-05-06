@@ -31,11 +31,13 @@ const bikieBrandName = [
     id: 2,
     img_url: logo2,
     title: "TVS",
+    path: "/yamahaBikeList",
   },
   {
     id: 3,
     img_url: logo3,
     title: "Aprilia",
+    path: "/yamahaBikeList",
   },
   {
     id: 4,
