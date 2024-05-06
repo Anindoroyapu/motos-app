@@ -10,6 +10,10 @@ import logo6 from "../../../assets/Brand/speeder.png";
 import { Link } from "react-router-dom";
 import mlinks from "../../../data/budgetGroup";
 import yamahaBikeList from "../../../data/BikeList/Yamaha/yamahaBikeList";
+import suzukiBikeList from "../../../data/BikeList/Suzuki/suzukiBikeList";
+import heroBikeList from "../../../data/BikeList/Hero/heroBikeList";
+import hondaBikeList from "../../../data/BikeList/Honda/hondaBikeList";
+import tvsBikeList from "../../../data/BikeList/Tvs/tvsBikeList";
 
 function Home() {
   const CTYPES = {
@@ -89,7 +93,7 @@ function Home() {
                 <div className="container ">
                   <div className="row d-inline-flex gap-5 me-2 p-4 border-bottom">
                     <div className="col ">
-                      <Link>
+                      <Link onClick={() => toggleCollapse(PRICELIST.HERO)}>
                         <img
                           src={logo1}
                           alt=""
@@ -98,31 +102,31 @@ function Home() {
                       </Link>
                     </div>
                     <div className="col">
-                      <a href="# ">
+                      <Link onClick={() => toggleCollapse(PRICELIST.HONDA)}>
                         <img
                           src={logo2}
                           alt=""
                           style={{ width: "100px", height: "100px" }}
                         />
-                      </a>
+                      </Link>
                     </div>
                     <div className="col">
-                      <a href="# ">
+                      <Link onClick={() => toggleCollapse(PRICELIST.SUZUKI)}>
                         <img
                           src={logo3}
                           alt=""
                           style={{ width: "100px", height: "100px" }}
                         />
-                      </a>
+                      </Link>
                     </div>
                     <div className="col">
-                      <a href="# ">
+                      <Link onClick={() => toggleCollapse(PRICELIST.TVS)}>
                         <img
                           src={logo4}
                           alt=""
                           style={{ width: "120px", height: "120px" }}
                         />
-                      </a>
+                      </Link>
                     </div>
                     <div className="col">
                       <Link onClick={() => toggleCollapse(PRICELIST.YAMAHA)}>
@@ -146,30 +150,175 @@ function Home() {
                 </div>
               </div>
             )}
-            <div className="container">
+            <div className="container yamaha-container">
               {categoryName === PRICELIST.YAMAHA && (
                 <div className="row align-items-start border border-secondary-subtle">
                   {yamahaBikeList.map((item) => (
-                    <div>
-                      <div className="col border" key={item.id}>
+                    <div className="border m-2">
+                      <div className="col " key={item.id}>
                         <div>
                           <Link>
                             <img
                               src={item.img_url}
                               alt={item.title}
                               className=""
+                              style={{
+                                width: "400px",
+                                height: "auto",
+                                float: "left",
+                              }}
                             />
                           </Link>
                         </div>
                       </div>
-                      <div className="col border">
+                      <div className="col m-3">
                         <Link className="text-decoration-none">
                           {item?.title}
                         </Link>
                         <div>{item?.price}</div>
                         <div>{item?.CC}</div>
                         <div>{item?.bikedetails}</div>
-                        <Link className=" fs-5 btn btn-primary text-decoration-none">
+                        <Link className=" fs-7 btn btn-primary text-decoration-none">
+                          Buy Now
+                        </Link>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+              {categoryName === PRICELIST.SUZUKI && (
+                <div className="row align-items-start border border-secondary-subtle">
+                  {suzukiBikeList.map((item) => (
+                    <div className="border m-2">
+                      <div className="col " key={item.id}>
+                        <div>
+                          <Link>
+                            <img
+                              src={item.img_url}
+                              alt={item.title}
+                              className=""
+                              style={{
+                                width: "400px",
+                                height: "auto",
+                                float: "left",
+                              }}
+                            />
+                          </Link>
+                        </div>
+                      </div>
+                      <div className="col m-3">
+                        <Link className="text-decoration-none">
+                          {item?.title}
+                        </Link>
+                        <div>{item?.price}</div>
+                        <div>{item?.CC}</div>
+                        <div>{item?.bikedetails}</div>
+                        <Link className=" fs-7 btn btn-primary text-decoration-none">
+                          Buy Now
+                        </Link>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+              {categoryName === PRICELIST.TVS && (
+                <div className="row align-items-start border border-secondary-subtle">
+                  {tvsBikeList.map((item) => (
+                    <div className="border m-2">
+                      <div className="col " key={item.id}>
+                        <div>
+                          <Link>
+                            <img
+                              src={item.img_url}
+                              alt={item.title}
+                              className=""
+                              style={{
+                                width: "400px",
+                                height: "auto",
+                                float: "left",
+                              }}
+                            />
+                          </Link>
+                        </div>
+                      </div>
+                      <div className="col m-3">
+                        <Link className="text-decoration-none">
+                          {item?.title}
+                        </Link>
+                        <div>{item?.price}</div>
+                        <div>{item?.CC}</div>
+                        <div>{item?.bikedetails}</div>
+                        <Link className=" fs-7 btn btn-primary text-decoration-none">
+                          Buy Now
+                        </Link>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+              {categoryName === PRICELIST.HERO && (
+                <div className="row align-items-start border border-secondary-subtle">
+                  {heroBikeList.map((item) => (
+                    <div className="border m-2">
+                      <div className="col " key={item.id}>
+                        <div>
+                          <Link>
+                            <img
+                              src={item.img_url}
+                              alt={item.title}
+                              className=""
+                              style={{
+                                width: "500px",
+                                height: "auto",
+                                float: "left",
+                              }}
+                            />
+                          </Link>
+                        </div>
+                      </div>
+                      <div className="col m-3">
+                        <Link className="text-decoration-none">
+                          {item?.title}
+                        </Link>
+                        <div>{item?.price}</div>
+                        <div>{item?.CC}</div>
+                        <div>{item?.bikedetails}</div>
+                        <Link className=" fs-7 btn btn-primary text-decoration-none">
+                          Buy Now
+                        </Link>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+              {categoryName === PRICELIST.HONDA && (
+                <div className="row align-items-start border border-secondary-subtle">
+                  {hondaBikeList.map((item) => (
+                    <div className="border m-2">
+                      <div className="col " key={item.id}>
+                        <div>
+                          <Link>
+                            <img
+                              src={item.img_url}
+                              alt={item.title}
+                              className=""
+                              style={{
+                                width: "500px",
+                                height: "auto",
+                                float: "left",
+                              }}
+                            />
+                          </Link>
+                        </div>
+                      </div>
+                      <div className="col m-3">
+                        <Link className="text-decoration-none">
+                          {item?.title}
+                        </Link>
+                        <div>{item?.price}</div>
+                        <div>{item?.CC}</div>
+                        <div>{item?.bikedetails}</div>
+                        <Link className=" fs-7 btn btn-primary text-decoration-none">
                           Buy Now
                         </Link>
                       </div>
@@ -181,7 +330,7 @@ function Home() {
 
             {categoryName === CTYPES.BUDGET && (
               <div>
-                <div className="container ">
+                <div className="container text-decoration-none">
                   <div className=" d-inline-flex gap-4 me-2 p-2">
                     {mlinks.map((item) => (
                       <Link key={item.id} to={item.path} className=" btn-col ">
@@ -192,41 +341,42 @@ function Home() {
                 </div>
               </div>
             )}
-
-            {categoryName === CTYPES.DISPLACEMENT && (
-              <div>
-                <div className="container ">
-                  <div className="row d-inline-flex gap-4 me-2 p-2">
-                    <div className="col btn-col">
-                      <a href="# ">Under 100cc</a>
+            <div>
+              {categoryName === CTYPES.DISPLACEMENT && (
+                <div>
+                  <div className="container ">
+                    <div className="row d-inline-flex gap-4 me-2 p-2 text-decoration-none">
+                      <div className="col btn-col">
+                        <a href="# ">Under 100cc</a>
+                      </div>
+                      <div className="col btn-col">
+                        <a href="# ">Under 150cc</a>
+                      </div>
+                      <div className="col btn-col">
+                        <a href="# ">Under 200cc</a>
+                      </div>
+                      <div className="col btn-col">
+                        <a href="# ">Under 250cc</a>
+                      </div>
                     </div>
-                    <div className="col btn-col">
-                      <a href="# ">Under 150cc</a>
-                    </div>
-                    <div className="col btn-col">
-                      <a href="# ">Under 200cc</a>
-                    </div>
-                    <div className="col btn-col">
-                      <a href="# ">Under 250cc</a>
-                    </div>
-                  </div>
-                  <div className="row d-inline-flex gap-4 me-2 p-4 border-bottom">
-                    <div className="col btn-col">
-                      <a href="# ">Under 300cc</a>
-                    </div>
-                    <div className="col btn-col">
-                      <a href="# ">Under 350cc</a>
-                    </div>
-                    <div className="col btn-col">
-                      <a href="# ">Under 400cc</a>
-                    </div>
-                    <div className="col btn-col">
-                      <a href="# ">Other</a>
+                    <div className="row d-inline-flex gap-4 me-2 p-4 border-bottom">
+                      <div className="col btn-col">
+                        <a href="# ">Under 300cc</a>
+                      </div>
+                      <div className="col btn-col">
+                        <a href="# ">Under 350cc</a>
+                      </div>
+                      <div className="col btn-col">
+                        <a href="# ">Under 400cc</a>
+                      </div>
+                      <div className="col btn-col">
+                        <a href="# ">Other</a>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            )}
+              )}
+            </div>
 
             {categoryName === CTYPES.BODYSTYLE && (
               <div>
