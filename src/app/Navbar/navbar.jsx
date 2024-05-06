@@ -42,7 +42,9 @@ function Navbar() {
   return (
     <nav className="header">
       <div className="navbar-header ">
-        <img src={dPhoto} alt="" />
+        <div className="navbar-photo">
+          <img src={dPhoto} alt="" />
+        </div>
       </div>
       <div>
         <div className="container text-center ">

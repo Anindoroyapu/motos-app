@@ -155,7 +155,7 @@ function Home() {
                 <div className="row align-items-start border border-secondary-subtle">
                   {yamahaBikeList.map((item) => (
                     <div className="border m-2">
-                      <div className="col " key={item.id}>
+                      <div className="col " key={item.id} to={item.path}>
                         <div>
                           <Link>
                             <img

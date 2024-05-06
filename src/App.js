@@ -13,6 +13,7 @@ import Electric from "./app/Pages/Electric/elctric";
 import Upcomming from "./app/Pages/upcomming";
 //import LoginModalPage from "./app/Navbar/Login/loginModal";
 import SignupModal from "./app/Navbar/SignUp/signupModal";
+import YamahaBikeList from "./data/BikeList/Yamaha/yamahaBikeList";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/electric" element={<Electric />} />
         <Route path="/upcomming" element={<Upcomming />} />
         <Route path="/signupModal" element={<SignupModal />} />
+        <Route path="/yamahaBikeList" element={<YamahaBikeList />} />
       </Routes>
     </BrowserRouter>
   );

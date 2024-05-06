@@ -25,6 +25,7 @@ const bikieBrandName = [
     id: 1,
     img_url: logo1,
     title: "YAMAHA",
+    path: "/yamahaBikeList",
   },
   {
     id: 2,
