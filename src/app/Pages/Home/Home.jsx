@@ -14,6 +14,7 @@ import suzukiBikeList from "../../../data/BikeList/Suzuki/suzukiBikeList";
 import heroBikeList from "../../../data/BikeList/Hero/heroBikeList";
 import hondaBikeList from "../../../data/BikeList/Honda/hondaBikeList";
 import tvsBikeList from "../../../data/BikeList/Tvs/tvsBikeList";
+import Showrooms from "../Showrooms/showrooms";
 
 function Home() {
   const CTYPES = {
@@ -444,6 +445,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <Showrooms />
     </div>
   );
 }
